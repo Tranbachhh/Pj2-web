@@ -1,0 +1,11 @@
+.main{
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.imgClass{
+    width: 90%;
+    height: 420px;
+    border-radius: 10px;
+}

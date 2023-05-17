@@ -1,0 +1,10 @@
+.showListItem{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.item{
+    flex-basis: calc(33% - 100px);
+    margin: 50px
+}

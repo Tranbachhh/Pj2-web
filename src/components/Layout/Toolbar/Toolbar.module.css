@@ -1,0 +1,65 @@
+.main {
+        display: flex;
+        height: 80px;
+        width: 1440px;
+        position: sticky;
+        background-color: #000000;
+        color: white;
+        top: 0px;
+        flex-wrap: wrap;
+    }
+
+.Logo {
+        margin-left: 90px;
+        margin-top: 5px;
+        background-color: red;
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        font-size: 25px;
+    }
+
+.Timkiem {
+        display: flex;
+        margin-left: 20px;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+
+.Timkiem input {
+        border-radius: 10px;
+        height: 30px;
+        width: 400px;
+        background-color: #D9D9D9;
+    }
+
+
+.Timkiem button {
+        width: 100px;
+        height: 30px;
+    }
+
+.Taikhoan {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+    }
+
+.menu{
+    display: flex;
+    width: 100%;
+    background-color: white;
+    align-items: center;
+    text-align: center;
+    height: 30px;
+}
+
+.itemMenu{
+    width: 20%;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+}

@@ -1,0 +1,41 @@
+.Menu{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    height: 240px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.item{
+    width: 20%;
+    margin: 5px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img{
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background-color: white;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 2px solid black;
+}
+
+.img img{
+    width: 70%;
+}
+
+.name{
+    flex-basis: 100%;
+    text-align: center;
+}

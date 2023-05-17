@@ -1,0 +1,66 @@
+.item{
+    padding: 10px;
+    background-color: #EBE4E4;
+    border-radius: 20px;
+    text-align: center;
+    width: 30%;
+    cursor: pointer;
+}
+
+.item img {
+    width: 80%;
+}
+
+.name{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #000000;
+}
+
+.price{
+    background-color: red;
+    width: 50%;
+    font-size: 18px;
+    font-weight: bolder;
+    border-radius: 30px ;
+    color: white;
+    height: 30px;
+}
+
+.price_discount{
+    display: flex;
+    margin: 10px;
+}
+
+.discount{
+    background-color: blue;
+    font-size: 20px;
+    margin-left: 10%;
+    width: 40%;
+    border-radius: 30px ;
+    color: red;
+    height: 30px;
+}
+
+.Info{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.infoItem{
+    flex-basis: calc(50% - 20px);
+    margin: 10px;
+}
+
+.price_1{
+    text-decoration: line-through;
+    font-weight: bolder;
+    font-size: 20px;
+}

@@ -1,0 +1,44 @@
+.homePage{
+    width: 1440px;
+    height: auto;
+}
+
+.iphone{
+    margin:5%;
+    background-color: white;
+}
+
+.khuyenmai{
+    width: 90%;
+    margin: auto;
+    background-color: red;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.kmhot{
+    width: 320px;
+    height: 55px;
+    margin: 50px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    color: #FFD600;
+
+}
+
+.ipname{
+    width: 345px;
+    height: 42px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    margin: 50px;
+    color: red;
+
+}
