@@ -20,12 +20,19 @@ function Item( {item = {
         className,
       ].join(" ");
 
+    const convertPriceToString = (price) => {
+        return price.toLocaleString("it-IT", {
+          style: "currency",
+          currency: "VND",
+        });
+      };
+
     return(
         
         <div className={classes}>
             <div className={styles.price_discount}> 
                 <div className={styles.price}>
-                    Giảm {Math.round(item.price*item.discount/100)}đ
+                    Giảm {convertPriceToString(Math.round(item.price*item.discount/100))}
                 </div>
                 <div className={styles.discount}>Trả góp : 0%</div>
             </div>
@@ -33,10 +40,10 @@ function Item( {item = {
             <div className={styles.name}>
                 {item.name}
             </div>
-            <div className={styles.price_1}>{item.price}đ</div>
+            <div className={styles.price_1}>{convertPriceToString(item.price)}</div>
             <div className={styles.price_discount}> 
                 <div className={styles.price}>
-                    {item.price-Math.round(item.price*item.discount/100)} đ
+                    {convertPriceToString(item.price-Math.round(item.price*item.discount/100))}
                 </div>
                 <div className={styles.discount}>Giảm : {item.discount}%</div>
             </div>

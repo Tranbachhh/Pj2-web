@@ -1,0 +1,124 @@
+.wrapper{
+    display: flex;
+    margin: 5%;
+}
+
+.container{
+    flex-basis: 40%;
+}
+
+.image{
+    width: 95%;
+    margin: auto;
+}
+
+.buttons{
+    width: 95%;
+    margin: 5%;
+    display: flex;
+}
+
+.button{
+    width: 45%;
+    margin: 10px;
+    background-color: white;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    border-radius: 20px;
+    border: 2px solid black;
+    height: 50px;
+}
+
+.buttonDg{
+    width: 90%;
+    margin: 5%;
+    background-color: white;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    border-radius: 20px;
+    border: 2px solid black;
+    height: 50px;
+}
+
+.description{
+    background-color: white;
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    border-radius: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.detail{
+    flex-basis: 60%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.detailContent{
+    margin: 5%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.nameProduct{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+}
+
+.priceProduct{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    color: #FF0000;
+}
+
+.parameter{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+table tr {
+    height: 50px;
+}
+
+table th {
+    text-transform: capitalize;
+    width: 200px;
+}
+
+table td {
+    width: 400px;
+    padding-left: 50px;
+    text-transform: capitalize;
+}
+
+.feedBack{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.feedBack textarea {
+    margin: 20px;
+    width: 90%;
+    height: 300px;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 20px;
+}
+

@@ -11,8 +11,8 @@ function Footer(){
             </div>
             <div className={styles.item_2}>
                 <span>
-                    Company <br/>
-                    About <br / >
+                    Company <br />
+                    About <br />
                     Contact us <br />
                     Support <br />
                     Careers
