@@ -3,7 +3,7 @@
     background-color: #EBE4E4;
     border-radius: 20px;
     text-align: center;
-    width: 30%;
+    width: 35%;
     cursor: pointer;
 }
 
@@ -25,26 +25,23 @@
 
 .price{
     background-color: red;
-    width: 50%;
     font-size: 18px;
     font-weight: bolder;
     border-radius: 30px ;
     color: white;
 }
 
-.price_discount{
-    display: flex;
-    margin: 10px;
-}
-
 .discount{
     background-color: blue;
     font-size: 20px;
-    margin-left: 10%;
-    width: 40%;
     border-radius: 30px ;
     color: red;
-    height: 30px;
+    margin-left: 10%;
+}
+
+.price_discount{
+    display: flex;
+    margin: 5%;
 }
 
 .Info{
@@ -54,7 +51,6 @@
 }
 
 .infoItem{
-    flex-basis: calc(50% - 20px);
     margin: 10px;
 }
 

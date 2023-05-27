@@ -1,11 +1,14 @@
 .homePage{
-    width: 1440px;
+    width: 100%;
     height: auto;
+    max-width: 100%;
 }
 
 .iphone{
+    width: 90%;
     margin:5%;
     background-color: white;
+    padding: 20px;
 }
 
 .khuyenmai{
@@ -14,6 +17,7 @@
     background-color: red;
     margin-top: 50px;
     border-radius: 20px;
+    padding: 20px;
 }
 
 .kmhot{
@@ -32,7 +36,6 @@
 .ipname{
     width: 345px;
     height: 42px;
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;

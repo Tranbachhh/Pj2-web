@@ -1,6 +1,8 @@
 import Toolbar from '../../../Layout/Toolbar/Toolbar'
 import Footer from '../../../Layout/Footer/Footer'
 import styles from './DetailProduct.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingBag,faCartPlus, faComment, faList, faStar, faGear } from '@fortawesome/free-solid-svg-icons';
 
 function DetailProduct(){
 
@@ -43,17 +45,17 @@ function DetailProduct(){
                 {/* Phần bên trái */}
                 <div className={styles.container}>
                     <div className={styles.image}>
-                        <img alt={product.name} src={product.images[0]} ></img>
+                        <img className='img-fluid' alt={product.name} src={product.images[0]} ></img>
                     </div>
                     <div className={styles.buttons}>
-                        <button className={styles.button} > Mô tả chi tiết </button>
-                        <button className={styles.button}> Nhận xét </button>
+                        <button className={[styles.button,'btn btn-primary'].join(" ")} ><FontAwesomeIcon icon={faList}/> Mô tả chi tiết </button>
+                        <button className={[styles.button,'btn btn-primary'].join(" ")}><FontAwesomeIcon icon={faComment}/> Nhận xét </button>
                     </div>
                     <div className={styles.description}>
                         {product.name} <br />
                         {product.description}
                     </div>
-                    <button className={styles.buttonDg}> Đánh giá sản phẩm</button>
+                    <button  className={[styles.buttonDg,'btn btn-warning'].join(" ")}><FontAwesomeIcon icon={faStar}/> Đánh giá sản phẩm</button>
                 </div>
                 {/* Phần bên phải */}
                 <div className={styles.detail}>
@@ -70,11 +72,16 @@ function DetailProduct(){
                                     {convertPriceToString(product.price)}
                                 </span>
                             </div>
+                            <div className={styles.buttons}>
+                                <button className={[styles.button,'btn btn-danger'].join(" ")} ><FontAwesomeIcon icon={faShoppingBag}/>MUA NGAY</button>
+                                <button className={[styles.button,'btn btn-primary'].join(" ")}><FontAwesomeIcon icon={faCartPlus}/>THÊM VÀO GIỎ HÀNG</button>
+                            </div>
                             <hr />
+                        {/* Thông số */}
                         </div>
                         <div className={styles.parameter}>
                             <span className={styles.nameProduct}>
-                                Thông số
+                                <FontAwesomeIcon icon={faGear}/> Thông số
                             </span>
                             <table>
                                 {Object.keys(product.detail).map((key, index) => {
