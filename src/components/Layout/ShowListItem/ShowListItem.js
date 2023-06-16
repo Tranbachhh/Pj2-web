@@ -2,6 +2,7 @@ import Item from "../Item/Item";
 
 import sytles from './ShowListItem.module.css'
 
+
 function ShowListItem({items }){
     return (
         <div className={sytles.showListItem} >

@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react"
-import styles from './ListImg.module.css'
 
 const dataImg = [
     "https://www.xtmobile.vn/vnt_upload/news/04_2022/29/man-hinh-iphone-14-pro-xtmobile.jpg",
     "https://cdn.tgdd.vn/Files/2022/02/23/1416901/caidat.jpg",
-    "https://didongviet.vn/dchannel/wp-content/uploads/2018/09/tren-tay-iphone-xs-xs-max-gold-didongviet.jpg",
-    "https://img5.thuthuatphanmem.vn/uploads/2021/07/15/anh-nen-dep-cho-iphone_030104560.png"
+    "https://images.samsung.com/au/smartphones/galaxy-s23/images/galaxy-s23-share-image.jpg",
 ]
 
 function ListImg(){
@@ -19,9 +17,13 @@ function ListImg(){
     ),[img])
 
     return(
-        <div className={styles.main} >
-            <img src={dataImg[img]} alt={img}  className={styles.imgClass}></img>
+        
+        <div className='row container-fluid p-5'>
+            <div className='col-lg-8 col-md-11 mx-auto' >
+            <img src={dataImg[img]} alt={img}  className='img-fluid rounded'></img>
+            </div>
         </div>
+
     )
 }
 

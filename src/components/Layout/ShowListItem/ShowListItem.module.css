@@ -2,8 +2,3 @@
     display: flex;
     flex-wrap: wrap;
 }
-
-.item{
-    flex-basis: calc(33% - 60px);
-    margin: 30px
-}

@@ -1,32 +1,56 @@
-import styles from './Toolbar.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeadphones, faMobile, faMobileScreen, faMobileScreenButton, faSearch,faShoppingCart,faTabletScreenButton,faUser } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 function Toolbar() {
-  return (
-    <div className={styles.main}>
-      <div className={styles.Logo}>
-        <FontAwesomeIcon icon={faMobileScreenButton} />
-      </div>
-      <div className={styles.Timkiem}>
-        <input className='col-md-5' placeholder='Tìm kiếm ...' />
-        <button className='col-md-2 btn btn-success'><FontAwesomeIcon icon={faSearch} /> Search</button>
-      </div>
-      <div className={styles.Taikhoan}>
-        <a href='https://www.facebook.com/'><FontAwesomeIcon icon={faUser} />Tài khoản</a>
-      </div>
-      <div className={styles.Taikhoan}>
-        <a href='https://www.facebook.com/'><FontAwesomeIcon icon={faShoppingCart} /> Giỏ hàng</a>
-      </div>
 
-      <div className={styles.menu}>
-          <div className={styles.itemMenu}><FontAwesomeIcon icon={faMobile} />ĐIỆN THOẠI</div>
-          <div className={styles.itemMenu}><FontAwesomeIcon icon={faMobileScreen}/>IPHONE</div>
-          <div className={styles.itemMenu}><FontAwesomeIcon icon={faTabletScreenButton}/>TABLET</div>
-          <div className={styles.itemMenu}><FontAwesomeIcon icon={faHeadphones}/>PHỤ KIỆN</div>
-          <div className={styles.itemMenu}><FontAwesomeIcon icon={faMobileScreenButton}/>ĐIỆN THOẠI CŨ</div>
+  function handleLinkClick() {
+    window.scrollTo(0, 0);
+  }
+
+  function handleLinkClickCenter() {
+    window.scrollTo(500, 0);
+  }
+
+  const category = ['Iphone','Tablet','Samsung','Headphone'];
+
+  return (
+    <div className='container-fluid m-0'>
+      <div className="row bg-dark px-2 col-lg-12 m-0">
+        <div className='col-lg-3 col-md-12'>
+          <FontAwesomeIcon icon={faMobileScreenButton} />
+        </div>
+        <div className='row col-lg-5'>
+          <input className='col-lg-6 col-md-12 form-control' placeholder='Tìm kiếm ...' style={{width:'300px'}}/>
+          <button className='col-lg-3 col-md-12 btn btn-success'><FontAwesomeIcon icon={faSearch} /> Search</button>
+        </div>
+        <div className='col-lg-2 col-md-12 d-flex justify-content-center align-items-center'>
+          <a href='https://www.facebook.com/'><FontAwesomeIcon icon={faUser} />Tài khoản</a>
+        </div>
+        <div className='col-lg-2 col-md-12 d-flex justify-content-center align-items-center'>
+          <a href='https://www.facebook.com/'><FontAwesomeIcon icon={faShoppingCart} /> Giỏ hàng</a>
+        </div>
       </div>
-    </div>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-center col-12">
+          <ul className="nav navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link" to='/' onClick={handleLinkClick}><FontAwesomeIcon icon={faMobile} />HOME</Link>
+            </li>
+            <li className="nav-item" onClick={handleLinkClickCenter}>
+              <Link className="nav-link" to={`/product/ofcategory/:${category[0]}`}><FontAwesomeIcon icon={faMobileScreen}/>IPHONE</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to={`/product/ofcategory/:${category[1]}`}><FontAwesomeIcon icon={faTabletScreenButton}/>TABLET</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to={`/product/ofcategory/:${category[2]}`}><FontAwesomeIcon icon={faMobileScreenButton}/>SAMSUNG</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to={`/product/ofcategory/:${category[3]}`}><FontAwesomeIcon icon={faHeadphones}/>PHỤ KIỆN</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
   );
 }
 
