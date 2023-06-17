@@ -2,6 +2,7 @@ import { faAppleAlt, faArrowDown, faCameraAlt, faMobileScreen, faSdCard } from '
 import styles from './Item.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 function Item( {item = {
   _id: "123456",
@@ -46,7 +47,9 @@ function Item( {item = {
       }
 
     return(
-      <div className={classes}>
+      <motion.div
+      whileHover={{scale:1.3}}
+      className={classes}>
         <div className={styles.item} onClick={handleLinkClick}>
           <Link to={`/product/detailproduct/:${item.category}`}>
             <div className='row m-2'> 
@@ -75,7 +78,7 @@ function Item( {item = {
             </div>
           </Link>
         </div>
-      </div>
+      </motion.div>
     )
 
 }

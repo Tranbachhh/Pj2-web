@@ -133,7 +133,9 @@ function DetailProduct(){
                 {/* Phần bên trái */}
                 <div className=' row col-lg-5 col-md-12 justify-content-center'>
                     <div className='row col-11 justify-content-center'>
-                        <img className='img-fluid rounded' alt={product.name} src={product.image[0]} ></img>
+                        <motion.img
+                        whileHover={{scale:1.3}}
+                        className='img-fluid rounded' alt={product.name} src={product.image[0]} ></motion.img>
                     </div>
                     <div className='row col-12 justify-content-around m-5'>
                         <button className='btn btn-primary col-5 ' ><FontAwesomeIcon icon={faList}/> Mô tả chi tiết </button>
@@ -161,8 +163,12 @@ function DetailProduct(){
                                 </span>
                             </div>
                             <div className='row col-12 justify-content-around m-3'>
-                                <button className='btn btn-danger col-5' onClick={handleClick}><FontAwesomeIcon icon={faShoppingBag}/>MUA NGAY</button>
-                                <button className='btn btn-primary col-5'><FontAwesomeIcon icon={faCartPlus}/>THÊM VÀO GIỎ HÀNG</button>
+                                <motion.button
+                                whileHover={{scale:1.4}}
+                                className='btn btn-danger col-5' onClick={handleClick}><FontAwesomeIcon icon={faShoppingBag}/>MUA NGAY</motion.button>
+                                <motion.button
+                                whileHover={{scale:1.4}}
+                                className='btn btn-primary col-5'><FontAwesomeIcon icon={faCartPlus}/>THÊM VÀO GIỎ HÀNG</motion.button>
                             </div>
                             <hr />
                         </div>
