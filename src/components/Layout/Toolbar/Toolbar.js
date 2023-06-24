@@ -16,13 +16,15 @@ function Toolbar() {
 
   return (
     <div className='container-fluid m-0'>
-      <div className="row bg-dark px-2 col-lg-12 m-0">
+      <div className="row bg-dark p-2 col-lg-12 m-0">
         <div className='col-lg-3 col-md-12'>
           <FontAwesomeIcon icon={faMobileScreenButton} />
         </div>
-        <div className='row col-lg-5'>
-          <input className='col-lg-6 col-md-12 form-control' placeholder='Tìm kiếm ...' style={{width:'300px'}}/>
-          <button className='col-lg-3 col-md-12 btn btn-success'><FontAwesomeIcon icon={faSearch} /> Search</button>
+        <div className='row col-lg-5 col-sm-12'>
+          <div className='col-lg-7 col-sm-6'>
+            <input className='form-control' placeholder='Tìm kiếm ...'/>
+          </div>
+          <button className='col-lg-3 col-sm-3 btn btn-success'><FontAwesomeIcon icon={faSearch} /> Search</button>
         </div>
         <div className='col-lg-2 col-md-12 d-flex justify-content-center align-items-center'>
           <a href='https://www.facebook.com/'><FontAwesomeIcon icon={faUser} />Tài khoản</a>
@@ -31,7 +33,7 @@ function Toolbar() {
           <a href='https://www.facebook.com/'><FontAwesomeIcon icon={faShoppingCart} /> Giỏ hàng</a>
         </div>
       </div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-center col-12">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-center col-lg-12 col-sm-0 ">
           <ul className="nav navbar-nav">
             <li className="nav-item">
               <Link className="nav-link" to='/' onClick={handleLinkClick}><FontAwesomeIcon icon={faMobile} />HOME</Link>

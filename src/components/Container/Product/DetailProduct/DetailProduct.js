@@ -3,7 +3,8 @@ import Footer from '../../../Layout/Footer/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBag,faCartPlus, faComment, faList, faStar, faGear } from '@fortawesome/free-solid-svg-icons';
 import { useParams } from 'react-router-dom';
-import {motion} from 'framer-motion'
+import {motion} from 'framer-motion' ;
+import Table from 'react-bootstrap/Table';
 
 function DetailProduct(){
 
@@ -131,14 +132,14 @@ function DetailProduct(){
             <Toolbar />
             <div className='row px-5 mt-5 mb-5'>
                 {/* Phần bên trái */}
-                <div className=' row col-lg-5 col-md-12 justify-content-center'>
+                <div className=' row col-lg-5 col-md-12 justify-content-center align-self-start'>
                     <div className='row col-11 justify-content-center'>
                         <motion.img
                         whileHover={{scale:1.3}}
                         className='img-fluid rounded' alt={product.name} src={product.image[0]} ></motion.img>
                     </div>
                     <div className='row col-12 justify-content-around m-5'>
-                        <button className='btn btn-primary col-5 ' ><FontAwesomeIcon icon={faList}/> Mô tả chi tiết </button>
+                        <button className='btn btn-primary col-5' ><FontAwesomeIcon icon={faList}/> Mô tả chi tiết </button>
                         <button className='btn btn-primary col-5'><FontAwesomeIcon icon={faComment}/> Nhận xét </button>
                     </div>
                     <div className='col-8 bg-light rounded text-center p-3 text-dark m-3'>
@@ -177,21 +178,19 @@ function DetailProduct(){
                             <span className='col-12 m-3' style={{'font-size':'36px'}}>
                                 <FontAwesomeIcon icon={faGear}/> Thông số
                             </span>
-                            <table className='col-10 m-3 rounded' style={{'font-size':'24px'}}>
-                                {Object.keys(product.detail).map((key, index) => {
-                                    let title = key.split("_").join(" ");
-                                    let colorBg = '#FFFFFF' ;
-                                    if(index % 2 === 0){colorBg='#D0D0D0'}
-                                    return (
-                                    <tr key={index} style={{'background-color':colorBg}}>
-                                        <th className='p-2 text-capitalize'>{title}: </th>
-                                        <td>
-                                        {product.detail[key]} {measure[index]}
-                                        </td>
-                                    </tr>
-                                    );
-                                })}
-                            </table>
+                            <Table striped bordered hover className='col-10 m-3 rounded' style={{'font-size':'24px'}}>
+                                <tbody>
+                                    {Object.keys(product.detail).map((key,index)=>{
+                                        let title = key.split("_").join(" ");
+                                        return(
+                                            <tr>
+                                                <td>{title}:</td>
+                                                <td>{product.detail[key]} {measure[index]}</td>
+                                            </tr>
+                                        )
+                                    })}
+                                </tbody>
+                            </Table>
                         </div>
                     </div>
                 </div>
