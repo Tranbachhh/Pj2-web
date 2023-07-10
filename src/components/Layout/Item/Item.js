@@ -47,8 +47,7 @@ function Item( {item = {
       }
 
     return(
-      <motion.div
-      whileHover={{scale:1.3}}
+      <div
       className={classes}>
         <div className={styles.item} onClick={handleLinkClick}>
           <Link to={`/product/detailproduct/:${item.category}`}>
@@ -58,7 +57,8 @@ function Item( {item = {
                 </div>
                 <div className='col-lg-4 bg-primary text-light border rounded'>Trả góp  0%</div>
             </div>
-            <img src={item.image[0]} alt={item.name} className='boder rounded col-8' />
+            <motion.img
+      whileHover={{scale:1.3}} src={item.image[0]} alt={item.name} className='boder rounded col-8' />
             <div className={styles.name}>
                 {item.name}
             </div>
@@ -78,7 +78,7 @@ function Item( {item = {
             </div>
           </Link>
         </div>
-      </motion.div>
+      </div>
     )
 
 }
