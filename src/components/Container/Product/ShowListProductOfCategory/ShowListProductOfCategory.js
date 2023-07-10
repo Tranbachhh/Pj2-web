@@ -2,6 +2,7 @@ import ShowListItem from '../../../Layout/ShowListItem/ShowListItem'
 import Toolbar from '../../../Layout/Toolbar/Toolbar'
 import Footer from '../../../Layout/Footer/Footer'
 import ListImg from '../../../Layout/ListImg/ListImg';
+import FilterBar from '../../../Layout/FilterBar';
 import {motion} from 'framer-motion'
 
 
@@ -239,6 +240,7 @@ function ShowListProductOfCategory(){
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}>
               <ListImg />
+              <FilterBar/>
               <div className='bg-light col-11 m-auto borderRadius mb-5'>
                 <h1 className='text-danger px-5' style={{'text-transform' : 'capitalize'}}>{categoryN}</h1>
                 <ShowListItem items={data[categoryN]} />

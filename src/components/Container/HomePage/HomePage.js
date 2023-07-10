@@ -210,7 +210,7 @@ discount: 20,}
 function HomePage(){
 
     return(
-        <div className="row container-fluid m-0">
+        <div className="m-0 p-0">
             <Toolbar />
             <motion.div
             initial={{ opacity: 0 }}

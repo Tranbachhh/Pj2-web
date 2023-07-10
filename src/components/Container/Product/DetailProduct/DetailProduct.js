@@ -1,9 +1,10 @@
 import Toolbar from '../../../Layout/Toolbar/Toolbar'
 import Footer from '../../../Layout/Footer/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingBag,faCartPlus, faComment, faList, faStar, faGear } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingBag,faCartPlus, faStar, faGear } from '@fortawesome/free-solid-svg-icons';
 import { useParams } from 'react-router-dom';
 import {motion} from 'framer-motion' ;
+import { useState } from 'react';
 import Table from 'react-bootstrap/Table';
 
 function DetailProduct(){
@@ -11,6 +12,22 @@ function DetailProduct(){
     const params = useParams();
     const product_id1 = params.product_id;
     const product_id = product_id1.substring(1);
+    const arr = [0, 0, 0, 0, 0];
+    const [rating, setRating] = useState(0);
+    const [rated, setRated] = useState(0);
+    
+      const handleRating = (index) => {
+        setRating(index + 1);
+      };
+    
+      const handleRatingOut = () => {
+        setRating(rated);
+      };
+    
+      const handleRated = (index) => {
+        alert(index + 1 + " star");
+        setRated(index + 1);
+      };
 
     const data = {
         'Iphone':[
@@ -128,19 +145,15 @@ function DetailProduct(){
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2 }}
-        className='container-fluid'>
+        className='m-0 p-0'>
             <Toolbar />
             <div className='row px-5 mt-5 mb-5'>
                 {/* Phần bên trái */}
                 <div className=' row col-lg-5 col-md-12 justify-content-center align-self-start'>
                     <div className='row col-11 justify-content-center'>
                         <motion.img
-                        whileHover={{scale:1.3}}
+                        whileHover={{scale:1.05}}
                         className='img-fluid rounded' alt={product.name} src={product.image[0]} ></motion.img>
-                    </div>
-                    <div className='row col-12 justify-content-around m-5'>
-                        <button className='btn btn-primary col-5' ><FontAwesomeIcon icon={faList}/> Mô tả chi tiết </button>
-                        <button className='btn btn-primary col-5'><FontAwesomeIcon icon={faComment}/> Nhận xét </button>
                     </div>
                     <div className='col-8 bg-light rounded text-center p-3 text-dark m-3'>
                         {product.name} <br />
@@ -196,6 +209,34 @@ function DetailProduct(){
                 </div>
                 {/* Phần đánh giá */}
                 <div className='col-12 mt-5 bg-light p-3 rounded'>
+                <span className="d-inline-block me-4">
+                      Xếp hạng sản phẩm:
+                    </span>
+                    <span className="d-inline-block">
+                      {arr.map((value, index) => {
+                        if (index < rating) {
+                          return (
+                            <FontAwesomeIcon
+                              icon={faStar}
+                              key={index}
+                              style={{ color: "yellow" }}
+                              onMouseOver={() => handleRating(index)}
+                              onMouseOut={handleRatingOut}
+                              onClick={() => handleRated(index)}
+                            />
+                          );
+                        } else
+                          return (
+                            <FontAwesomeIcon
+                              icon={faStar}
+                              key={index}
+                              onMouseOver={() => handleRating(index)}
+                              onMouseOut={handleRatingOut}
+                              onClick={() => handleRated(index)}
+                            />
+                          );
+                      })}
+                    </span>
                     <h2>Nhận xét</h2>
                     <textarea className='col-10 form-control' rows='10' />
                     <button className='btn btn-primary m-2'>Gửi</button>

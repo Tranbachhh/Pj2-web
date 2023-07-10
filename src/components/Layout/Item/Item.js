@@ -1,4 +1,4 @@
-import { faAppleAlt, faArrowDown, faCameraAlt, faMobileScreen, faSdCard } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown, faMicrochip, faMobileScreen, faSdCard } from '@fortawesome/free-solid-svg-icons';
 import styles from './Item.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
@@ -52,29 +52,37 @@ function Item( {item = {
         <div className={styles.item} onClick={handleLinkClick}>
           <Link to={`/product/detailproduct/:${item.category}`}>
             <div className='row m-2'> 
-                <div className='col-lg-7 col-md-12 bg-danger text-light border rounded m-auto'>
+                <div className='col-lg-8 col-md-12 bg-danger text-light border rounded mb-3'>
                     Giảm {convertPriceToString(Math.round(item.price*item.discount/100))}
                 </div>
-                <div className='col-lg-4 bg-primary text-light border rounded'>Trả góp  0%</div>
             </div>
             <motion.img
-      whileHover={{scale:1.3}} src={item.image[0]} alt={item.name} className='boder rounded col-8' />
-            <div className={styles.name}>
+      whileHover={{scale:1.1}} src={item.image[0]} alt={item.name} className='boder rounded col-10 mb-3' />
+            <div style={{ fontWeight: 600 }}>
                 {item.name}
             </div>
-            <div className={styles.price_1}>{convertPriceToString(item.price)}</div>
+            <div className="text-decoration-line-through mb-4 mt-2">{convertPriceToString(item.price)}</div>
             <div className="row m-2"> 
-                <div className="col-7 bg-danger text-light border rounded m-auto" >
+                <div className="col-7 bg-danger text-light border rounded-5 m-auto" >
                     {convertPriceToString(item.price-Math.round(item.price*item.discount/100))}
                 </div>
-                <div className="col-4 bg-primary text-light border rounded"><FontAwesomeIcon icon={faArrowDown} /> {item.discount}%</div>
+                <div className="col-4 bg-primary text-light border rounded-5"><FontAwesomeIcon icon={faArrowDown} /> {item.discount}%</div>
             </div>
-            <hr />
-            <div className='row'>
-                <span className='col-lg-6 col-md-12'><FontAwesomeIcon icon={faAppleAlt} /> Hệ điều hành : {item.detail.operating_system}</span> 
-                <span className='col-lg-6 col-md-12'><FontAwesomeIcon icon={faSdCard} /> RAM: {item.detail.ram} G</span>
-                <span className='col-lg-6 col-md-12'><FontAwesomeIcon icon={faMobileScreen} /> Màn hình : {item.detail.display_size} Inch</span>
-                <span className='col-lg-6 col-md-12'><FontAwesomeIcon icon={faCameraAlt} /> Camera: {item.detail.rear_camera} MP</span>
+            <div className={[styles.productdetail,"container-fluid row g-0"].join(" ")}>
+              <div className="col-6 col-sm-12 col-md-12 col-lg-6">
+                <FontAwesomeIcon icon={faMicrochip} />{" "}
+                {item.detail.operating_system}
+              </div>
+              <div className="col-6 col-sm-12 col-md-12 col-lg-6">
+                <FontAwesomeIcon icon={faMobileScreen} />{" "}
+                {item.detail.display_size} Inch
+              </div>
+              <div className="col-6 col-sm-12 col-md-12 col-lg-6">
+                <FontAwesomeIcon icon={faSdCard} /> {item.detail.ram} Gb
+              </div>
+              <div className="col-6 col-sm-12 col-md-12 col-lg-6">
+                <FontAwesomeIcon icon={faSdCard} /> {item.detail.memory} Gb
+              </div>
             </div>
           </Link>
         </div>

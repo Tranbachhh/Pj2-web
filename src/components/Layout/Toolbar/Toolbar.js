@@ -15,21 +15,24 @@ function Toolbar() {
   const category = ['Iphone','Tablet','Samsung','Headphone'];
 
   return (
-    <div className='container-fluid m-0'>
+    <div className='m-0 p-0'>
       <div className="row bg-dark p-2 col-lg-12 m-0">
         <div className='col-lg-3 col-md-12'>
           <FontAwesomeIcon icon={faMobileScreenButton} />
         </div>
-        <div className='row col-lg-5 col-sm-12'>
+        <div className='row col-lg-6 col-sm-12'>
           <div className='col-lg-7 col-sm-6'>
             <input className='form-control' placeholder='Tìm kiếm ...'/>
           </div>
           <button className='col-lg-3 col-sm-3 btn btn-success'><FontAwesomeIcon icon={faSearch} /> Search</button>
         </div>
-        <div className='col-lg-2 col-md-12 d-flex justify-content-center align-items-center'>
-          <a href='https://www.facebook.com/'><FontAwesomeIcon icon={faUser} />Tài khoản</a>
+        <div className='col-lg-1 col-md-12 d-flex justify-content-center align-items-center'>
+        <Link to="/register"><FontAwesomeIcon icon={faUser} />REGISTER </Link>
         </div>
-        <div className='col-lg-2 col-md-12 d-flex justify-content-center align-items-center'>
+        <div className='col-lg-1 col-md-12 d-flex justify-content-center align-items-center'>
+        <Link to="/login"><FontAwesomeIcon icon={faUser} />LOGIN </Link>
+        </div>
+        <div className='col-lg-1 col-md-12 d-flex justify-content-center align-items-center'>
           <a href='https://www.facebook.com/'><FontAwesomeIcon icon={faShoppingCart} /> Giỏ hàng</a>
         </div>
       </div>
