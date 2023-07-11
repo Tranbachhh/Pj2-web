@@ -1,0 +1,76 @@
+
+.cart-wrapper .goback-btn {
+    background-color: transparent;
+    border          : none
+}
+
+.cart-wrapper .goback-btn:hover {
+    text-decoration: underline;
+}
+
+
+.cart-wrapper .products-container,
+.cart-wrapper .coupon-container {
+    padding      : 10px;
+    border-radius: 10px;
+}
+
+.cart-wrapper .products-container table>thead {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.cart-wrapper .products-container table>tbody tr {
+    height: 120px;
+}
+
+
+.cart-wrapper .products-container .product-visible {
+    display    : flex;
+    align-items: center;
+    margin     : auto
+}
+
+.cart-wrapper .products-container .product-image {
+    display            : inline-block;
+    height             : 100px;
+    width              : 100px;
+    margin             : 10px 0;
+    background-position: center;
+    background-size    : contain;
+}
+
+
+.cart-wrapper .quantity-cell .quantity-group {
+    display        : inline-flex;
+    justify-content: center;
+    align-items    : center;
+    border         : 1px solid black;
+    border-radius  : 99999px;
+}
+
+.cart-wrapper .quantity-cell button {
+    border          : none;
+    background-color: transparent;
+    padding         : 0px 5px;
+    min-width       : 22px;
+}
+
+.cart-wrapper .quantity-cell button:hover {
+    font-weight: 700;
+}
+
+.cart-wrapper .quantity-cell span {
+    min-width   : 30px;
+    text-align  : center;
+    border-left : 1px solid #333;
+    border-right: 1px solid #333;
+}
+
+.cart-wrapper .delete-btn {
+    color: #8f8c8c;
+}
+
+.cart-wrapper .delete-btn:hover {
+    color: red;
+}

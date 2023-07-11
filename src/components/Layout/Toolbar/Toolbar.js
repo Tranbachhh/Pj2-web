@@ -33,7 +33,7 @@ function Toolbar() {
         <Link to="/login"><FontAwesomeIcon icon={faUser} />LOGIN </Link>
         </div>
         <div className='col-lg-1 col-md-12 d-flex justify-content-center align-items-center'>
-          <a href='https://www.facebook.com/'><FontAwesomeIcon icon={faShoppingCart} /> Giỏ hàng</a>
+          <Link to="/cart"><FontAwesomeIcon icon={faShoppingCart} /> CART</Link>
         </div>
       </div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-center col-lg-12 col-sm-0 ">
